@@ -249,6 +249,10 @@ class PageImages {
 	 * @param Skin &$skin Skin object used to generate the page. Ignored
 	 */
 	public static function onBeforePageDisplay( OutputPage &$out, Skin &$skin ) {
+		global $wgPageImagesOpenGraph;
+		if( !$wgPageImagesOpenGraph ) {
+			return;
+		}
 		$imageFile = self::getPageImage( $out->getContext()->getTitle() );
 		if ( !$imageFile ) {
 			$fallback = $out->getConfig()->get( 'PageImagesOpenGraphFallbackImage' );
