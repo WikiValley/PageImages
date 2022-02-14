@@ -74,6 +74,9 @@
 				}
 			]
 		},
+		"PageImagesOpenGraph": {
+			"value": true
+		},
 		"PageImagesBlacklistExpiry": {
 			"value": 900
 		},
